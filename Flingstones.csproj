@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F43BC8A8-4271-4081-98CA-3D98135791B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Flingstones</RootNamespace>
+    <AssemblyName>Flingstones</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Shanism.Common">
+      <HintPath>..\..\bin\Shanism.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Shanism.Engine">
+      <HintPath>..\..\bin\Shanism.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abilities\stone.cs" />
+    <Compile Include="Buffs\Chilled.cs" />
+    <Compile Include="Buffs\Haste.cs" />
+    <Compile Include="Doodads\Bradva.cs" />
+    <Compile Include="Doodads\Tree.cs" />
+    <Compile Include="Units\Albimon.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Scripts\MonsterWaves.cs" />
+    <Compile Include="Scripts\SpawnHero.cs" />
+    <Compile Include="Scripts\SpawnRandomMonsters.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Textures\effects\energy-ball.png" />
+    <Content Include="Textures\effects\fire-eater.png" />
+    <Content Include="Textures\effects\fire-scissors.png" />
+    <Content Include="Textures\effects\fire-sign.png" />
+    <Content Include="Textures\effects\fireball.png" />
+    <Content Include="Textures\effects\lightning-strike.png" />
+    <Content Include="Textures\effects\raindrops.png" />
+    <Content Include="Textures\effects\spark.png" />
+    <Content Include="Textures\effects\sword-fire.png" />
+    <Content Include="Textures\fire.png" />
+    <Content Include="Textures\fireball.png" />
+    <Content Include="Textures\fireball2.png" />
+    <Content Include="Textures\firespell.png" />
+    <Content Include="Textures\firespell2.png" />
+    <Content Include="Textures\Icons\air-burst-jade-3.png" />
+    <Content Include="Textures\Icons\air-burst-magenta-2.png" />
+    <Content Include="Textures\Icons\enchant-orange-3.png" />
+    <Content Include="Textures\Icons\ground2.png" />
+    <Content Include="Textures\Icons\horror-eerie-2.png" />
+    <Content Include="Textures\Icons\ice-sky-2.png" />
+    <Content Include="Textures\Icons\lightning-1.png" />
+    <Content Include="Textures\Icons\lightning-2.png" />
+    <Content Include="Textures\Icons\lightning-3.png" />
+    <Content Include="Textures\Icons\spear.png" />
+    <Content Include="Textures\Objects\axe2.png" />
+    <Content Include="Textures\Objects\hero.png" />
+    <Content Include="Textures\Objects\mobche.png" />
+    <Content Include="Textures\Objects\mobche2.png" />
+    <Content Include="Textures\terrain_atlas.png" />
+    <Content Include="Textures\torch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Effects\" />
+    <Folder Include="Items\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
